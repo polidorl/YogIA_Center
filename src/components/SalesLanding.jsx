@@ -94,7 +94,7 @@ export default function SalesLanding({ onEnterApp }) {
                     >
                         <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.2)]">
                             <Image
-                                src="/hero-landscape.png"
+                                src="hero-landscape.png"
                                 alt="Yoga and Technology"
                                 fill
                                 className="object-cover"

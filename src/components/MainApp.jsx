@@ -21,7 +21,7 @@ const MOCK_CLASSES = [
         //precio: 15,//
         nivel: 'Intermedio',
         //imagen: 'https://images.unsplash.com/photo-1695795749640-4f31c388b476?q=80&w=687&auto=format&fit=crop',//
-        imagen: '/yoga_vinyasa_yo.png',
+        imagen: 'yoga_vinyasa_yo.png',
         instructor: { nombre: 'Lisbeth' }
     },
     {
@@ -123,7 +123,7 @@ const MOCK_CLASSES = [
         //precio: 20,//
         nivel: 'principiante',
         imagePosition: '50% 75%',
-        imagen: '/yoga-nidra.jpg',
+        imagen: 'yoga-nidra.jpg',
         instructor: { nombre: 'Lisbeth' }
     },
     {
@@ -145,7 +145,7 @@ const MOCK_CLASSES = [
         duracion: 60,
         //precio: 20,//
         //nivel: 'Todos los niveles',
-        imagen: '/yoga-nature.jpg',
+        imagen: 'yoga-nature.jpg',
         instructor: { nombre: 'Lisbeth' }
     }
 ];
@@ -506,7 +506,7 @@ export default function MainApp() {
 
                         <section className="relative w-full h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl bg-gray-900">
                             <Image
-                                src="/hero-landscape.png"
+                                src="hero-landscape.png"
                                 alt="Portada YogIA"
                                 fill
                                 className="object-cover object-center transform hover:scale-105 transition-transform duration-700"
@@ -565,9 +565,9 @@ export default function MainApp() {
                                             onPlay={() => isMusicEnabled && audioRef.current?.play()}
                                             onPause={() => audioRef.current?.pause()}
                                         >
-                                            <source src="/yoga_Video.mp4" type="video/mp4" />
+                                            <source src="yoga_Video.mp4" type="video/mp4" />
                                         </video>
-                                        <audio ref={audioRef} loop src="/yoga_music.mp3" />
+                                        <audio ref={audioRef} loop src="yoga_music.mp3" />
                                         <button
                                             onClick={() => {
                                                 const newMusicState = !isMusicEnabled;
@@ -619,7 +619,7 @@ export default function MainApp() {
                                 </div>
                                 {/* Reducción del Estrés */}
                                 <YogaFeatureSection
-                                    imageSrc="/yoga_reduccion_estres.png"
+                                    imageSrc="yoga_reduccion_estres.png"
                                     imageAlt="Reducción del Estrés"
                                     title="Reducción del Estrés"
                                     description="A través de la respiración consciente Pranayama), calmamos el sistema nervioso, reduciendo la ansiedad que genera el ritmo de vida actual."
@@ -630,7 +630,7 @@ export default function MainApp() {
 
                                 {/* Claridad Mental */}
                                 <YogaFeatureSection
-                                    imageSrc="/yoga_Claridad_Mental.png"
+                                    imageSrc="yoga_Claridad_Mental.png"
                                     imageAlt="Claridad Mental y Enfoque"
                                     title="Claridad Mental y Enfoque"
                                     description="Al silenciar el ruido externo durante la práctica, mejoramos nuestra capacidad de concentración, lo que se traduce en una mayor productividad y creatividad en nuestros proyectos."
@@ -654,7 +654,7 @@ export default function MainApp() {
 
                                 {/* Tip 1 */}
                                 <YogaFeatureSection
-                                    imageSrc="/blog_tip_neck.jpg"
+                                    imageSrc="blog_tip_neck.jpg"
                                     imageAlt="El Reset de Cuello"
                                     title="Tip 1"
                                     description="Realiza círculos suaves con el cuello y estiramientos laterales. Libera tensión cervical y mejora el flujo sanguíneo al cerebro para mantenerte enfocado."
@@ -665,7 +665,7 @@ export default function MainApp() {
 
                                 {/* Tip 2 */}
                                 <YogaFeatureSection
-                                    imageSrc="/blog_tip_wrist.jpg"
+                                    imageSrc="blog_tip_wrist.jpg"
                                     imageAlt="Estiramiento de Muñecas"
                                     title="Tip 2"
                                     description="Estira brazos y dedos para prevenir el túnel carpiano tras largas sesiones de typing. Previene tensión, lesiones y relaja los tendones."
@@ -679,7 +679,7 @@ export default function MainApp() {
 
                                 {/* Tip 3 */}
                                 <YogaFeatureSection
-                                    imageSrc="/blog_tip_cobra.jpg"
+                                    imageSrc="blog_tip_cobra.jpg"
                                     imageAlt="La Postura de la Cobra"
                                     title="Tip 3"
                                     description="Abre el pecho y mejora la capacidad respiratoria, contrarrestando la postura de techie encorvada. Mejora la capacidad respiratoria y corrige la postura."
@@ -692,7 +692,7 @@ export default function MainApp() {
 
                                 {/* Tip 4 */}
                                 <YogaFeatureSection
-                                    imageSrc="/blog_tip_eyes.jpg"
+                                    imageSrc="blog_tip_eyes.jpg"
                                     imageAlt="Regla 20-20-20"
                                     title="Tip 4"
                                     description="Cada 20 minutos, mira a 20 pies de distancia por 20 segundos. Relaja los músculos oculares y previene dolores de cabeza por fatiga visual."
@@ -706,7 +706,7 @@ export default function MainApp() {
 
                                 {/* Tip 5 */}
                                 <YogaFeatureSection
-                                    imageSrc="/blog_tip_breath.jpg"
+                                    imageSrc="blog_tip_breath.jpg"
                                     imageAlt="Respiración Consciente"
                                     title="Tip 5"
                                     description="Inhala, retén, exhala y retén en 4 tiempos. Calma el sistema nervioso y devuelve la claridad mental en momentos de estrés o debugging intenso."
@@ -740,7 +740,7 @@ export default function MainApp() {
                                 <div className="md:w-2/5">
                                     <div className="relative rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-300">
                                         <img
-                                            src="/about-me.jpg"
+                                            src="about-me.jpg"
                                             alt="Lisbeth E. Polidor"
                                             className="w-full h-auto object-cover"
                                         />
@@ -754,7 +754,7 @@ export default function MainApp() {
                         <section id="contacto" className="relative w-full rounded-3xl overflow-hidden mb-16 shadow-xl bg-gray-900 group">
                             <div className="relative h-[500px]">
                                 <img
-                                    src="/contact-hero.png"
+                                    src="contact-hero.png"
                                     alt="Lisbeth Yoga Posa"
                                     className="w-full h-full object-cover object-center"
                                 />

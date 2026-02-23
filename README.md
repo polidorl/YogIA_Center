@@ -2,7 +2,7 @@
 
 **YogIA Center** es una plataforma premium de Yoga y Bienestar que fusiona la sabiduría milenaria de la práctica física con el potencial de la Inteligencia Artificial. Diseñada especialmente para profesionales del sector tecnológico (Techies & Devs), la plataforma optimiza el "hardware" humano a través del movimiento consciente y la claridad mental.
 
-Este **repositorio** es una muestra de lo que se puede lograr mediante el uso estratégico de la IA,en este caso utilice la Plataforma de **antigravity** para el desarrollo de la misma, refinado con ajustes técnicos manuales.Es una pieza ilustrativa que demuestra mi capacidad para integrar herramientas avanzadas sin perder el criterio humano.Aunque el contenido está inspirado en mi practica personal de **Yoga**, mi enfoque y meta profesional están centrados en la creación de **páginas web de alto impacto**
+Este **repositorio** es una muestra de lo que se puede lograr mediante el uso estratégico de la IA,en este caso utilicé la Plataforma de **antigravity** para el desarrollo de la misma, refinado con ajustes técnicos manuales.Es una pieza ilustrativa que demuestra mi capacidad para integrar herramientas avanzadas sin perder el criterio humano.Aunque el contenido está inspirado en mi practica personal de **Yoga**, mi enfoque y meta profesional están centrados en la creación de **páginas web de alto impacto**
 
 ---
 
@@ -22,7 +22,9 @@ Este **repositorio** es una muestra de lo que se puede lograr mediante el uso es
 - [🧠 Aprendizajes y Reflexiones](#-aprendizajes-y-reflexiones)
   - [🌌 La Potencia de Antigravity](#-la-potencia-de-antigravity)
   - [🔌 MCP y la Gestión de Datos](#-mcp-y-la-gestión-de-datos-supabase)
-- [�️ Desarrollo Continuo](#️-desarrollo-continuo)
+- [�️ Desarrollo Continuo](#-desarrollo-continuo)
+- [🚀 Despliegue Multi-Plataforma Optimizado](#-despliegue-multi-plataforma-optimizado)
+- [🔗 Enlaces del Proyecto](#-enlaces-del-proyecto)
 - [�👩‍💻 Sobre la Autora](#-sobre-la-autora)
 
 ---
@@ -54,8 +56,16 @@ Este **repositorio** es una muestra de lo que se puede lograr mediante el uso es
 - **Backend & Auth**: [Supabase](https://supabase.com/)
 - **Iconografía**: [Lucide React](https://lucide.dev/)
 - **Manejo de Fechas**: [date-fns](https://date-fns.org/)
+- **Despliegue**: [Vercel (Producción)](https://vercel.com/)
+- **Despliegue**: [GitHub Pages (Static Hosting con GitHub Actions)](https://pages.github.com/)
 
 ---
+
+## 🔗 Enlaces del Proyecto
+
+Puedes visualizar la plataforma YogIA Center en cualquiera de nuestros despliegues oficiales:
+- **Versión de Producción (Vercel)**: [yog-ia-center.vercel.app](https://yog-ia-center.vercel.app)
+- **Versión Estática (GitHub Pages)**: [polidorl.github.io/YogIA_Center/](https://polidorl.github.io/YogIA_Center/)
 
 ## 🎨 Identidad Visual
 
@@ -112,19 +122,31 @@ El uso de **MCP (Model Context Protocol)** ha sido un punto de inflexión. A tra
 - **Automatización de Infraestructura**: Gestión de roles, políticas de seguridad (RLS) y migraciones de forma integrada en el chat.
 
 Esta combinación de IA agéntica y protocolos de herramientas (MCP) representa el futuro del desarrollo Full-Stack, permitiendo que el desarrollador se enfoque en la arquitectura creativa mientras la IA maneja la complejidad técnica operativa.
+¿El resultado? Una reducción drástica en los tiempos de entrega y una arquitectura superior, donde el talento humano se dedica exclusivamente a crear valor estratégico y soluciones de negocio.
 
 ---
 
 ## �️ Desarrollo Continuo
 
 Este proyecto se encuentra en una fase de **evolución constante**. Es importante destacar que:
-- **Estado Actual**: Es una pieza demostrativa creada para evidenciar capacidades técnicas en integración de IA, diseño de interfaces y manejo de datos.
+- **Estado Actual**: Es una app demostrativa creada para evidenciar capacidades técnicas en integración de IA, diseño de interfaces y manejo de datos.
 - **Pendientes**: Aún quedan optimizaciones por implementar, adaptaciones de diseño para casos de borde y funcionalidades adicionales para completar la experiencia de usuario final.
 - **Propósito**: Mostrar el potencial de las herramientas agénticas modernas aplicadas al desarrollo de software de alta calidad.
 
 ---
+## 🚀 Despliegue Multi-Plataforma Optimizado
 
-## �👩‍💻 Sobre la Autora
+Este proyecto, YogIA Center, ha sido diseñado con una arquitectura flexible que permite el despliegue automático y simultáneo en diversas plataformas:
+
+- **Vercel (Producción Directa)**: Configurado para despliegue continuo desde la rama main, sirviendo la aplicación desde la raíz del dominio para máxima velocidad y rendimiento en el renderizado.
+
+- **GitHub Pages (Static Export)**: Utiliza GitHub Actions para automatizar el proceso de construcción (build) y exportación estática de Next.js 14.
+
+- **Configuración Inteligente**: Incluye un archivo **next.config.js** dinámico que ajusta automáticamente el basePath dependiendo del entorno de ejecución, permitiendo que tanto los estilos CSS como las imágenes se carguen correctamente en subcarpetas de GitHub o dominios raíz de Vercel.
+
+- **Seguridad de Datos**: La integración con **Supabase** está protegida mediante el uso de **GitHub Repository Secrets**, inyectando las variables de entorno de forma segura durante el proceso de compilación en la nube.
+
+## 👩‍💻 Sobre la Autora
 **Lisbeth E. Polidor** - Frontend Dev y Yoguista.
 Combinando la ingeniería con la fluidez del yoga para crear soluciones digitales que conectan.
 

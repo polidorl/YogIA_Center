@@ -6,31 +6,31 @@ const BlogYogaTips = () => {
     const tips = [
         {
             id: "neck-reset",
-            imageSrc: "/blog_tip_neck.jpg",
+            imageSrc: "blog_tip_neck.jpg",
             title: "1. El 'Reset' de Cuello",
             description: "Realiza círculos suaves con el cuello y estiramientos laterales. Libera tensión cervical y mejora el flujo sanguíneo al cerebro.",
         },
         {
             id: "wrist-stretch",
-            imageSrc: "/blog_tip_wrist.jpg",
+            imageSrc: "blog_tip_wrist.jpg",
             title: "2. Estiramiento de Muñecas",
             description: "Estira brazos y dedos para prevenir el túnel carpiano tras largas sesiones de typing. Relaja los tendones.",
         },
         {
             id: "cobra-pose",
-            imageSrc: "/blog_tip_cobra.jpg",
+            imageSrc: "blog_tip_cobra.jpg",
             title: "3. La Postura de la Cobra",
             description: "Abre el pecho y mejora la capacidad respiratoria, contrarrestando la postura encorvada frente al monitor.",
         },
         {
             id: "eye-rule",
-            imageSrc: "/blog_tip_eyes.jpg",
+            imageSrc: "blog_tip_eyes.jpg",
             title: "4. Regla 20-20-20",
             description: "Cada 20 minutos, mira a 20 pies de distancia por 20 segundos. Relaja los músculos oculares.",
         },
         {
             id: "square-breath",
-            imageSrc: "/blog_tip_breath.jpg",
+            imageSrc: "blog_tip_breath.jpg",
             title: "5. Respiración Cuadrada",
             description: "Inhala, retén, exhala y retén en 4 tiempos. Devuelve la claridad mental en momentos de debugging intenso.",
         }
@@ -57,8 +57,8 @@ const BlogYogaTips = () => {
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {tips.map((tip) => (
                             <li key={tip.id}>
-                                <a 
-                                    href={`#${tip.id}`} 
+                                <a
+                                    href={`#${tip.id}`}
                                     className="flex items-center gap-2 text-gray-600 hover:text-wood transition-colors group text-lg"
                                 >
                                     <ArrowRight size={16} className="text-wood/40 group-hover:translate-x-1 transition-transform" />
