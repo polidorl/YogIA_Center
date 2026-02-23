@@ -220,8 +220,8 @@ export default function SalesLanding({ onEnterApp }) {
                             </button>
                         </div>
                         <div className="flex items-center gap-10">
-                            <a href="#" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Linkedin size={28} /></a>
-                            <a href="#" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Github size={28} /></a>
+                            <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano/" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Linkedin size={28} /></a>
+                            <a href="https://github.com/polidorl/" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Github size={28} /></a>
                             <a href="#" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Instagram size={28} /></a>
                         </div>
                     </div>
