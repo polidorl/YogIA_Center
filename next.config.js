@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <--- ESTA ES LA LÍNEA CLAVE
+  output: 'export',
+  basePath: '/YogIA_Center', // <--- AÑADE ESTA LÍNEA (Debe coincidir con el nombre de tu repositorio)
   images: {
-    unoptimized: true, // Necesario para GitHub Pages
+    unoptimized: true,
   },
 };
 
