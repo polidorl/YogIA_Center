@@ -34,6 +34,8 @@ export default function AuthModal({ isOpen, onClose }) {
                         data: {
                             full_name: name,
                         },
+                        //Agregamos esta linea para que el usuario sea redirigido a la pagina de confirmación
+                        emailRedirectTo: `${window.location.origin}/auth/callback`,
                     },
                 });
                 if (error) throw error;
