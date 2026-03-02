@@ -1,10 +1,16 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, CheckCircle2, Heart, Zap, Globe, Github, Linkedin, Instagram } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2, Heart, Zap, Globe, Github, Linkedin, Instagram, Info } from 'lucide-react';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function SalesLanding({ onEnterApp }) {
+    const [isWebView, setIsWebView] = useState(false);
+
+    useEffect(() => {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        const isInstagram = ua.indexOf('Instagram') > -1;
+        const isFB = ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1;
+        setIsWebView(isInstagram || isFB);
+    }, []);
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -219,8 +225,21 @@ export default function SalesLanding({ onEnterApp }) {
                                 Acceder Gratis a la Plataforma
                             </button>
                         </div>
-                        <div className="flex items-center gap-10">
-                            <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Linkedin size={28} /></a>
+                        <div className="flex items-center gap-10 relative">
+                            <div className="relative group/li">
+                                <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all flex items-center justify-center">
+                                    <Linkedin size={28} />
+                                </a>
+                                {isWebView && (
+                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 bg-gray-900 text-white text-xs rounded-xl shadow-2xl opacity-0 group-hover/li:opacity-100 transition-opacity pointer-events-none z-[110]">
+                                        <div className="flex gap-2 items-start">
+                                            <Info size={14} className="text-brand-mint flex-shrink-0 mt-0.5" />
+                                            <p>Tip Profesional: Si LinkedIn te pide iniciar sesión, usa los tres puntos de arriba y selecciona <b>"Abrir en el navegador"</b> para ver mi perfil completo.</p>
+                                        </div>
+                                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-900"></div>
+                                    </div>
+                                )}
+                            </div>
                             <a href="https://github.com/polidorl" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Github size={28} /></a>
                             <a href="https://instagram.com/polidor.lisbeth4" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-50 rounded-full text-gray-600 hover:text-wood hover:bg-brand-mint/20 transition-all"><Instagram size={28} /></a>
                         </div>

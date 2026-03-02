@@ -7,7 +7,7 @@ import CalendarGrid from './CalendarGrid';
 import { supabase } from '../lib/supabaseClient';
 import ConceptModal from './ConceptModal';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Calendar as CalendarIcon, LogOut, ChevronDown, Github, Linkedin, MessageCircle, Instagram, MapPin, Sparkles, LayoutDashboard } from 'lucide-react';
+import { Menu, X, Calendar as CalendarIcon, LogOut, ChevronDown, Github, Linkedin, MessageCircle, Instagram, MapPin, Sparkles, LayoutDashboard, Info } from 'lucide-react';
 import YogaFeatureSection from './YogaFeatureSection';
 
 // Mock data until backend is connected
@@ -176,6 +176,14 @@ export default function MainApp() {
     const audioRef = useRef(null);
     const videoRef = useRef(null);
     const [isMusicEnabled, setIsMusicEnabled] = useState(true);
+    const [isWebView, setIsWebView] = useState(false);
+
+    useEffect(() => {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        const isInstagram = ua.indexOf('Instagram') > -1;
+        const isFB = ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1;
+        setIsWebView(isInstagram || isFB);
+    }, []);
 
     useEffect(() => {
         // Helper to fetch role
@@ -764,10 +772,21 @@ export default function MainApp() {
                                     <p className="text-xl font-medium mb-1">Frontend Dev y Yoguista.</p>
                                     <p className="text-sm text-gray-300">Comencé a crear sitios web en: 2022</p>
 
-                                    <div className="flex items-center justify-center gap-8 mt-5">
-                                        <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-mint transition-colors transform hover:scale-110">
-                                            <Linkedin size={28} />
-                                        </a>
+                                    <div className="flex items-center justify-center gap-8 mt-5 relative">
+                                        <div className="relative group/li">
+                                            <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-mint transition-colors transform hover:scale-110 flex items-center justify-center">
+                                                <Linkedin size={28} />
+                                            </a>
+                                            {isWebView && (
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 bg-gray-900 text-white text-xs rounded-xl shadow-2xl opacity-0 group-hover/li:opacity-100 transition-opacity pointer-events-none z-[110] text-center">
+                                                    <div className="flex gap-2 items-start text-left">
+                                                        <Info size={14} className="text-brand-mint flex-shrink-0 mt-0.5" />
+                                                        <p>Tip: Para evitar el bloqueo de LinkedIn, selecciona <b>"Abrir en el navegador"</b> en el menú de arriba.</p>
+                                                    </div>
+                                                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-900"></div>
+                                                </div>
+                                            )}
+                                        </div>
                                         <a href="https://github.com/polidorl" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-mint transition-colors transform hover:scale-110">
                                             <Github size={28} />
                                         </a>
@@ -897,9 +916,20 @@ export default function MainApp() {
             < footer className="bg-gray-900 text-white py-12 px-6" >
                 <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
                     <div className="flex items-center gap-8">
-                        <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="hover:text-brand-mint transition-colors transform hover:scale-110">
-                            <Linkedin size={28} />
-                        </a>
+                        <div className="relative group/li">
+                            <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="hover:text-brand-mint transition-colors transform hover:scale-110 flex items-center justify-center">
+                                <Linkedin size={28} />
+                            </a>
+                            {isWebView && (
+                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 bg-gray-900 text-white text-xs rounded-xl shadow-2xl opacity-0 group-hover/li:opacity-100 transition-opacity pointer-events-none z-[110] text-center">
+                                    <div className="flex gap-2 items-start text-left">
+                                        <Info size={14} className="text-brand-mint flex-shrink-0 mt-0.5" />
+                                        <p>Tip: Selecciona <b>"Abrir en el navegador"</b> para ver mi perfil de LinkedIn completo.</p>
+                                    </div>
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-900"></div>
+                                </div>
+                            )}
+                        </div>
                         <a href="https://github.com/polidorl" target="_blank" rel="noopener noreferrer" className="hover:text-brand-mint transition-colors transform hover:scale-110">
                             <Github size={28} />
                         </a>
