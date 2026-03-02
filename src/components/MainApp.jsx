@@ -765,7 +765,7 @@ export default function MainApp() {
                                     <p className="text-sm text-gray-300">Comencé a crear sitios web en: 2022</p>
 
                                     <div className="flex items-center justify-center gap-8 mt-5">
-                                        <a href="https://linkedin.com/in/lisbeth-emperatriz-polidor-solano" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-mint transition-colors transform hover:scale-110">
+                                        <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-mint transition-colors transform hover:scale-110">
                                             <Linkedin size={28} />
                                         </a>
                                         <a href="https://github.com/polidorl" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-mint transition-colors transform hover:scale-110">
@@ -897,7 +897,7 @@ export default function MainApp() {
             < footer className="bg-gray-900 text-white py-12 px-6" >
                 <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
                     <div className="flex items-center gap-8">
-                        <a href="https://linkedin.com/in/lisbeth-emperatriz-polidor-solano" target="_blank" rel="noopener noreferrer" className="hover:text-brand-mint transition-colors transform hover:scale-110">
+                        <a href="https://www.linkedin.com/in/lisbeth-emperatriz-polidor-solano?trk=public_profile_browsemap" target="_blank" rel="noopener noreferrer" className="hover:text-brand-mint transition-colors transform hover:scale-110">
                             <Linkedin size={28} />
                         </a>
                         <a href="https://github.com/polidorl" target="_blank" rel="noopener noreferrer" className="hover:text-brand-mint transition-colors transform hover:scale-110">
